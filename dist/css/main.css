@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #737883;
+  color: #fffff4;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  margin: 20px 0 0 0;
+  text-align: justify; }
+
+header,
+article,
+aside {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  max-width: 700px;
+  margin: 20px 20px; }
+
+h1 {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 8px solid #ffff92;
+  text-align: center;
+  color: #ff98b3; }
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter; }
+
+ol li {
+  counter-increment: my-awesome-counter; }
+
+ol li::before {
+  content: counter(my-awesome-counter) ". ";
+  color: #ff98b3;
+  font-weight: bold; }
+
+li {
+  padding: 10px 0; }
+
+nav > a {
+  background-color: #00e1d6;
+  border-radius: 8px;
+  color: #fffff4;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+nav > a:hover {
+  background-color: #ffff92;
+  color: #00e1d6; }
+
+p.center {
+  text-align: center; }
+
+span.small {
+  color: #ffff92;
+  margin-top: 10px; }
+
+.spanTealTextColor {
+  color: #00e1d6; }
+
+span.note {
+  color: #ffff92; }
+
+article .codeSnippet {
+  background-color: #ff98b3;
+  padding: 10px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  width: 300px; }
+
+article > .center > a {
+  color: #ff98b3;
+  text-decoration: none; }
+
+article > .center > a:hover {
+  color: #ffff92; }
+
+#page {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center; }
+
+#topH1 {
+  margin-bottom: 0; }
+
+#headerWelcomeMsg {
+  margin: 0px 0px 30px 0px; }
+
+#headerWithNav {
+  height: 60px;
+  margin: 0px 0px 100px 0px;
+  text-align: center; }
+
+#headerWithNav > nav {
+  margin: 20px 0 0 0; }
+
+footer {
+  text-align: center;
+  height: 50px;
+  padding: 45px 0 10px 0;
+  color: #737883;
+  background-image: linear-gradient(to right top, #ff98b3, #eaa2e2, #b9b5ff, #71c8ff, #00d6ff, #00e0f0, #26e7db, #61edc1, #8bf4b1, #b3f9a2, #d9fd97, #ffff92); }

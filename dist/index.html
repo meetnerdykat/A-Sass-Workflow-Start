@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Sass Workflow</title>
+</head>
+
+<body>
+  <div id="page">
+    <header id="headerWelcomeMsg">
+      <h1 id="topH1">Welcome</h1>
+      <span class="small">to a short summary of getting started with Sass</span>
+      <div id="shortWidthLine"></div>
+    </header>
+    <header id="headerWithNav">
+      <span class="small">Resources I used in this project:</span>
+      <nav>
+        <a href="https://youtu.be/gYzHS-n2gqU">YouTube</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS GRID</a>
+        <a href="https://mycolor.space/">Color Space</a>
+      </nav>
+      <nav>
+        <a href="https://css-tricks.com/custom-list-number-styling/">OL Style</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">VS Code</a>
+        <a href="https://sass-lang.com/">Sass</a>
+        <a href="https://github.com/meetnerdykat/A-Sass-Workflow-Start.git">Github</a>
+      </nav>
+    </header>
+
+    <article>
+      <h1>Setting Up A Sass Project</h1>
+      <p class="center">
+        This project will serve as a template/setup for future Sass
+        projects. I'm going to use Node Sass. The following are the steps I took:
+      </p>
+      <ol>
+        <li>Create a package.json file by typing <br><span class="spanTealTextColor">npm init</span> in the terminal</li>
+        <li>Install Node-Sass Module by typing <br> <span class="spanTealTextColor">npm install node-sass</span> in
+          terminal</li>
+        <li>Setup Node-Sass so that it works: <br>
+          Create a script to compile the Sass. Open package.json file, and
+          change test to sass in the scripts object. Change the script
+          object to look like this:</li>
+        <div class="codeSnippet">
+          from
+          <br>
+          "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1"
+          },
+          <br>
+          to
+          <br>
+          "scripts": { "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+          },
+        </div>
+
+        <li>Test it by typing <span class="spanTealTextColor">npm run sass</span> in the terminal</li>
+        <p><span class="note">NOTE: </span>After I've added the above to the main.scss file, and then go to my terminal
+          and run <span class="spanTealTextColor">npm run sass</span>, a new folder called css will get auto generated
+          inside the existing dist folder and it contains a new file named main.css
+          This new file will get the compiled css loaded into it.</p>
+        <p><span class="note">NOTE: </span>Nothing will happen because I haven't added any Sass yet and
+          I haven't added the link to the compiled css <span class="spanTealTextColor">css/main.css</span> in the
+          head of my HTML file. So...</p>
+        <li>
+          Go to main.scss file and write some Sass:
+          <div class="codeSnippet">
+            -- $primary-color: #003760;
+            <br><br>
+            body {
+            <br>
+            &nbsp background: $primary-color;
+            <br>
+            &nbsp color: #fff;
+            <br>
+            }
+          </div>
+          <p><span class="note">NOTE: </span>If you look at your webpage in the browser, it should now be whatever color
+            you chose.</p>
+        </li>
+        <li>
+          Go back to HTML file and include the link to <span class="spanTealTextColor">css/main.css</span>
+        </li>
+        <p><span class="note">NOTE: </span>If I go back to dist/css/main.css and look, it now has the compiled Sass!</p>
+      </ol>
+    </article>
+
+    <article>
+      <h1>So to quickly sum up the steps: </h1>
+      <ol>
+        <li>Create package.json file with <br> <span class="spanTealTextColor">npm init</span> </li>
+        <li>Install node-sass with <br> <span class="spanTealTextColor">npm install node-sass</span></li>
+        <li>Create a script to run the sass</li>
+        <li>Use VSCode extension "Live Server" to open the index.html file in the browser</li>
+        <li>Go to main.scss file and write some Sass</li>
+        <li>Go to index.html and include link to compiled css. Use <span class="spanTealTextColor">css/main.css</span>
+          path</li>
+        <li>Look at the instant results in the browser window! </li>
+        </li>
+      </ol>
+    </article>
+
+    <aside>
+      <h1>Last Step</h1>
+      <p class="center">
+        <h3>Get it on git. In the terminal type in:</h3> 
+        </p>
+        <div class="codeSnippet">
+          <ol>
+            <li><span class="spanTealTextColor">git init</span></li>
+            <li> read what it says</li>
+            <li><span class="spanTealTextColor">git status</span></li>
+            <li> notice the feed back is red</li>
+            <li><span class="spanTealTextColor">git add .</span></li>
+            <li>The above means to add all the files in your current directory to git. (THE PERIOD INCLUDED!!!)</li>
+            <li><span class="spanTealTextColor">git status</span> again</li>
+            <li> notice the feed back is now green</li>
+            <li><span class="spanTealTextColor">git commit &nbsp -m ' your message '</span> <br> If on Windows, use double quotes instead of single, it might help!</li>
+          </ol>
+        </div>
+      </p>
+    </aside>
+
+    <article>
+      <h1>Social</h1>
+      <p class="center">
+        I created this little webpage as a point of reference for myself and anyone else who may come accross it. My
+        hope is that it helps in some way. I'd love to hear from you either way. So send me a <a href="https://twitter.com/meetnerdykat" target="blank">Tweet</a> or comment on
+        <a href="https://www.instagram.com/meetnerdykat/" target="blank">Instagram</a> or <a href="https://www.youtube.com/channel/UC8XuH3ynwdYuV_HV5n0I26A?view_as=subscriber" target="blank">YouTube</a>.
+      </p>
+    </article>
+    <!-- <footer>By Nerdy Kat &copy; 2019</footer> -->
+  </div>
+  <footer><p class"footerP">By Nerdy Kat &copy; 2019</p></footer>
+</body>
+
+</html>
